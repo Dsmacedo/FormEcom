@@ -1,0 +1,214 @@
+/* Define o container principal com largura máxima de 80% e centraliza */
+.container {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+/* Aplica um gradiente no cabeçalho */
+.hdGradient {
+    background: linear-gradient(130deg, #7a06da, #070c14);
+}
+
+/* Estilização básica do corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização do formulário */
+form {
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilização dos fieldsets do formulário */
+fieldset {
+    border: none;
+    margin-bottom: 15px;
+}
+
+/* Estilização das legendas dos fieldsets */
+legend {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: rgb(90, 57, 8);
+}
+
+/* Estilização dos rótulos dos inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Estilização dos inputs e selects */
+input,
+select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilização dos inputs e selects quando estão em foco */
+input:focus,
+select:focus {
+    border-color: #350b5c;
+    outline: none;
+    box-shadow: 0 0 15px #8A2BE2, 0 0 5px #290649, 0 0 5px #8A2BE2;
+}
+
+/* Estilização dos botões de radio */
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+/* Estilização dos botões de ação */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilização individual dos botões de ação */
+.action-buttons button {
+    padding: 20px 50px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 22px;
+    margin: 20px;
+}
+
+/* Estilização do botão de envio */
+.action-buttons button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Estilização do botão de reset */
+.action-buttons button[type="reset"] {
+    background-color: #f44336;
+    color: white;
+}
+
+/* Layout para informações do cliente com duas colunas */
+.cliente-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Organização flexível para cada div dentro de .cliente-info */
+.cliente-info div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Layout para informações de endereço com duas colunas */
+.endereco-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Estilização da coluna esquerda do endereço */
+.endereco-info .left {
+    grid-column: span 1;
+}
+
+/* Layout das informações de número e complemento dentro da coluna direita */
+.endereco-info .right {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+/* Estilização das informações de pagamento */
+.pag-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Estilização individual dos elementos dentro de .pag-info */
+.pag-info div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+}
+
+/* Estilização dos ícones de pagamento */
+.sizeIcone {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Estilização do rodapé */
+.footer {
+    background: linear-gradient(130deg, #7a06da, #070c14);
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilização dos elementos de informação de contato e direitos autorais no rodapé */
+.footer .contact-info,
+.footer .copyright {
+    margin: 10px;
+}
+
+/* Estilização dos ícones de links sociais */
+.social-imglink {
+    max-width: 50px;
+    margin-left: 40px;
+}
+
+/* Ajustes de layout para telas menores */
+@media (max-width: 600px) {
+    /* Ajusta a largura máxima do container para telas menores */
+    .container {
+        max-width: 95%;
+    }
+
+    /* Define layout de uma coluna para informações do cliente e endereço em telas menores */
+    .cliente-info,
+    .endereco-info {
+        grid-template-columns: 1fr;
+    }
+
+    /* Define layout de uma coluna para a seção direita do endereço em telas menores */
+    .endereco-info .right {
+        grid-template-columns: 1fr;
+    }
+
+    /* Define layout de coluna única para informações de pagamento em telas menores */
+    .pag-info {
+        flex-direction: column;
+    }
+
+    /* Adiciona espaço entre os elementos em .pag-info em telas menores */
+    .pag-info div {
+        margin-bottom: 20px;
+    }
+
+    /* Define layout de coluna única para botões de ação em telas menores */
+    .action-buttons {
+        flex-direction: column;
+        gap: 20px;
+    }
+}

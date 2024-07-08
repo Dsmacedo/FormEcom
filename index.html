@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Pedido</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+
+<body>
+    <div class="hdGradient">
+        <header class="container">
+            <a href="#"><img style="max-width: 190px;" src="./components/logo/jitterbit-seeklogo.svg" alt="logo"></a>
+        </header>
+    </div>
+
+    <div class="container">
+        <main>
+            <form class="container">
+                <fieldset>
+                    <legend>Informações do Cliente</legend>
+                    <div class="cliente-info">
+                        <div>
+                            <label for="nome" minlength="3" >Nome Completo</label>
+                            <input type="text" id="nome" name="nome" required>
+                        </div>
+                        <div>
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="telefone">
+                            <label for="telefone" minlength="11">Telefone</label>
+                            <input type="tel" id="telefone" name="telefone" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Endereço de Entrega</legend>
+                    <div class="cliente-info">
+                        <div>
+                            <label for="cep">CEP</label>
+                            <input minlength="7" type="text" id="cep" name="cep" required>
+                        </div>
+                        <div>
+                            <label for="estado">Estado</label>
+                            <select id="estado" name="estado" required>
+                                <option value="">Selecione...</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="endereco-info">
+                        <div class="left">
+                            <label for="rua">Rua</label>
+                            <input type="text" id="rua" name="rua" required>
+                        </div>
+                        <div class="right">
+                            <div>
+                                <label for="numero">Número</label>
+                                <input type="text" id="numero" name="numero" required>
+                            </div>
+                            <div>
+                                <label for="complemento">Complemento</label>
+                                <input type="text" id="complemento" name="complemento">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cliente-info">
+                        <div>
+                            <label for="bairro">Bairro</label>
+                            <input type="text" id="bairro" name="bairro" required>
+                        </div>
+                        <div>
+                            <label for="cidade">Cidade</label>
+                            <input type="text" id="cidade" name="cidade" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações do Pedido</legend>
+                    <label for="produto">Id Produto</label>
+                    <select id="produto" name="produto" required>
+                        <option value="">Selecione...</option>
+                        <option value="1">Bitcoin BTC</option>
+                        <option value="2">Etherium ETH</option>
+                        <option value="3">Tether USDT</option>
+                        <option value="4">Solana SOL</option>
+                        <option value="5">XRP</option>
+                    </select>
+                    <label for="quantidade">Quantidade</label>
+                    <input type="number" id="quantidade" name="quantidade" required min="1">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Informações do Pagamento</legend>
+                    <div class="pag-info">
+                        <div>
+                            <img class="sizeIcone" src="./components/icones/creditcard.png" alt="">
+                            <input type="radio" id="credito" name="pagamento" value="credito" required>
+                            <label for="credito">Cartão de Crédito</label>
+                        </div>
+                        <div>
+                            <img class="sizeIcone" src="./components/icones/boleto.png" alt="">
+                            <input type="radio" id="boleto" name="pagamento" value="boleto" required>
+                            <label for="boleto">Boleto Bancário</label>
+                        </div>
+                        <div>
+                            <img class="sizeIcone" src="./components/icones/paypal.png" alt="">
+                            <input type="radio" id="paypal" name="pagamento" value="paypal" required>
+                            <label for="paypal">PayPal</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <div class="action-buttons">
+                    <button type="submit">Enviar Pedido</button>
+                    <button type="reset">Limpar Formulário</button>
+                </div>
+            </form>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="contact-info">
+            Endereço: Rua Responsivo , 777 - Bairro JS - Node, SP<br>
+            Telefone: (16) 1234-5678<br>
+            E-mail: contato@empresa.com
+        </div>
+        <div>
+            <a href="#"><img class="social-imglink" src="./components/icones/face.png" alt=""></a>
+            <a href="#"><img class="social-imglink" src="./components/icones/twitter.png" alt=""></a>
+            <a href="#"><img class="social-imglink" src="./components/icones/instagram_2111463.png" alt=""></a>
+        </div>
+        <div class="copyright">
+            &copy; 2024 Empresa Fictícia. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+    <script src="./script/viacep.js"></script>
+    <script src="./script/mascara.js"></script>
+</body>
+
+</html>
